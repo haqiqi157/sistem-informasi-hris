@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers\API;
 
+use Exception;
+use App\Models\User;
+use App\Models\Company;
+use Illuminate\Http\Request;
+use GuzzleHttp\Promise\Create;
 use App\Helpers\ResponseFormatter;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CompanyRequest;
-use App\Http\Requests\UpdateCompanyRequest;
-use App\Models\Company;
-use App\Models\User;
-use Exception;
-use Illuminate\Http\Request;
+use App\Http\Requests\CreateCompanyRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\UpdateCompanyRequest;
 
 class CompanyController extends Controller
 {
@@ -49,7 +50,7 @@ class CompanyController extends Controller
         );
     }
 
-    public function create(CompanyRequest $request)
+    public function create(CreateCompanyRequest $request)
     {
         try {
             //Upload logo

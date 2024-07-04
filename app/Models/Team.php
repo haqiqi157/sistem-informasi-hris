@@ -12,7 +12,7 @@ class Team extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'name', 'icon'
+        'name', 'icon', 'company_id'
     ];
 
     public function company()

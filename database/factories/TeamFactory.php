@@ -19,7 +19,7 @@ class TeamFactory extends Factory
         return [
             'name' => $this->faker->jobTitle(),
             'icon' => $this->faker->imageUrl(),
-            'company_id' => $this->faker->numberBetween(1, 10),
+            'company_id' => $this->faker->numberBetween(10, 25),
         ];
     }
 }

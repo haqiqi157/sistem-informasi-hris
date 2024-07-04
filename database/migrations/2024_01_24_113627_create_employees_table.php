@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('photo')->nullable();
 
             $table->boolean('is_verified')->default(false);
-            $table->timestamp('verified_at');
+            $table->timestamp('verified_at')->nullable();
 
             $table->unsignedBigInteger('team_id');
             $table->unsignedBigInteger('role_id');
